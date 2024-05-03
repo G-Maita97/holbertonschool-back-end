@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-import sys
 import requests
+import sys
 
 # URLs de los endpoints
 url_names = 'https://jsonplaceholder.typicode.com/users'
