@@ -12,7 +12,8 @@ response_users = requests.get(url_users)
 
 # Verificar el estado de la response_users
 if response_users.status_code != 200:
-    print(f'Error al obtener datos de usuarios. Código de estado: {response_users.status_code}')
+    print(f'Error al obtener datos de usuarios. Código de estado: '
+          f'{response_users.status_code}')
     exit(1)  # Salir del script si hay un error en la solicitud de usuarios
 
 # Convertir la respuesta JSON de usuarios en una lista de usuarios
@@ -23,7 +24,8 @@ response_todos = requests.get(url_todos)
 
 # Verificar el estado de la response_todos
 if response_todos.status_code != 200:
-    print(f'Error al obtener datos de tareas. Código de estado: {response_todos.status_code}')
+    print(f'Error al obtener datos de tareas. Código de estado: '
+          f'{response_todos.status_code}')
     exit(1)  # Salir del script si hay un error en la solicitud de tareas
 
 # Convertir la respuesta JSON de tareas en una lista de tareas
