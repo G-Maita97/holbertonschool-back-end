@@ -8,7 +8,7 @@ import sys
 url_names = 'https://jsonplaceholder.typicode.com/users'
 url_tasks = 'https://jsonplaceholder.typicode.com/todos'
 
-# Verificar si se proporciona un argumento (ID de usuario) en la línea de comandos
+# Verificar si se proporciona un argumento(ID de usuario)en la líne de comand
 if len(sys.argv) < 2:
     print("Usage: python3 1-export_to_CSV.py <user_id>")
     sys.exit(1)
@@ -59,11 +59,11 @@ for task in tasks_data:
 csv_filename = f"{user_id}.csv"
 with open(csv_filename, 'w', newline='') as csvfile:
     fieldnames = ['User ID', 'Username', 'Task Completed Status', 'Task Title']
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames,
+                            quoting=csv.QUOTE_ALL)
 
     writer.writeheader()
     for task in filtered_tasks:
         writer.writerow(task)
 
 print(f"Los datos se han exportado correctamente en '{csv_filename}'.")
-
